@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+void division(int dividende, int diviseur, int *quotient, int *reste){
+  *quotient = divende/reste;
+  *reste = dividende%diviseur;
+}
+
+int main(){
+  int dividende, diviseur, quotient, reste;
+  printf("Entrez le dividende: ");
+  scanf("%d", &dividende);
+  printf("Entrez le diviseur : ");
+  division(dividende, diviseur, &quotient, &restescanf("%d", &diviseur);

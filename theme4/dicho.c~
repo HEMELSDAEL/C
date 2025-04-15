@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+float *search_dicho_rec(float v, float *tab, int start, int end){
+  if(start > end){
+    return NULL;
+  }
+  int mid = start + (end - start)/2;
+  if(v == tab[mid]){
+    return &tab[mid];
+  }
+  else if (v<tab[mid]){
+    return search_dicho_rec(v, tab, start, mid-1);
+  }
+  else{
+    return search_dicho_rec(v, tab, mid + 1, end);
+  }
+}

@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "swap_ptr.h"
+
+int
+main_swap_ptr() {
+  int a, b;
+  int *p = &a;
+  int *q = &b;
+
+  swap_ptr(&p, &q);
+  if ((p == &b) && (q == &a)) {
+    printf("OK ;)\n");
+    exit(EXIT_SUCCESS);
+  } else {
+    printf("KO ;(\n");
+    exit(EXIT_FAILURE);
+    }
+}
